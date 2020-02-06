@@ -16,9 +16,7 @@ class StudentiController extends Controller
     public function stampaDocenti()
     {
         $docentiList = DB::table('docente')->select('cognome', 'nome', 'orario_ricevimento', 'giorno_ricevimento')->get();
-        //return view('docenti')->with('docentiList');
         return view('docenti',['docentiList' => $docentiList]);
-        //return $docentiList;
     }
 
     public function stampaListaCorsi($id)
